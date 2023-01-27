@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{%block main%}
+<form method="post" action="/sell">
+    <select name="symbol" placeholder="Symbol">
+        {% for item in list %}
+            <option value="{{ item["key"] }}">{{item["key"]}}</option>
+        {% endfor %}
+    </select>
+    <input type="number" name="shares" placeholder="No. of shares">
+    <button type="submit">Sell</button>
+</form>
+{%endblock%}

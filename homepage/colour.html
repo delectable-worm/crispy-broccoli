@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Colour</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                colourBtn = document.querySelector("#click");
+                colourBtn.addEventListener('click', function(){
+                    red = random(0,255); blue=random(0,255); green=random(0,255);
+                    document.querySelector("#test").innerHTML = `${red} ${green} ${blue}`;
+                    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+                });
+            });
+
+            function random(a, b)
+            {
+                return(a + Math.floor(((b-a+1)*Math.random())));
+            }
+        </script>
+    </head>
+    <body>
+        <button id="click">Click me!</button>
+        <a href="index.html">go home</a>
+        <p id="test"></p>
+    </body>
+</html>

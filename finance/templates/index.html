@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block main %}
+{%block form%}
+{% endblock %}
+ <table class="table table-striped">
+   <th>
+
+      <td class="text-start">Symbol</td>
+      <td class="text-end">Shares owned</td>
+      <td class="text-end">Price</td>
+      <td class="text-end">Total</td>
+   </th>
+    {% for item in owned %}
+    <tr>
+      <td class="text-start">{{ item["name"] }}</td>
+      <td class="text-start">{{ item["key"] }}</td>
+      <td class="text-end">{{ item["shares"] }}</td>
+      <td class="text-end">{{ item["price"]}}</td>
+      <td class="text-end">{{ item["value"] }}</td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="text-end">Cash:</td>
+      <td class="text-end">{{ available }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="text-end">Total:</td>
+      <td class="text-end">{{ total }}</td>
+    </tr>
+ </table>
+
+{% endblock %}

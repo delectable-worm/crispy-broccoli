@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}
+History
+{% endblock %}
+{% block main %}
+    <table class="table table-striped">
+    <th>
+        <td>key</td>
+        <td>shares</td>
+        <td>bought price</td>
+        <td>now price</td>
+        <td>time</td>
+    </th>
+    {% for trade in trades %}
+    <tr>
+        <td></td>
+    <td>{{ trade["key"] }}</td>
+    <td>{{ trade["shares"] }}</td>
+    <td>{{ trade["price"] }}</td>
+    <td>{{ trade["current"]}}</td>
+    <td>{{ trade["time"] }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

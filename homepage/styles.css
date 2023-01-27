@@ -1,0 +1,64 @@
+body{
+    margin: 0px;
+    background-color: #00fffb;
+    overflow-x: scroll;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#main{
+
+    margin-top: 5vh;
+    height: 90vh;
+    margin-bottom:5vh;
+    overflow-x: scroll;
+    display:flex;
+    flex-wrap:nowrap;
+}
+
+.scroll-item{
+    background-color:#000000;
+    color:#ffffff;
+    border: 5px solid red;
+    flex: 1 1 auto;
+    display: flex;
+    writing-mode: vertical-lr;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.scroll-item:hover{
+    opacity:1;
+}
+
+.scroll-item:nth-child(2n){
+    background-color:#999999;
+}
+
+.scroll-grid{
+    height: 100%;
+    border: 3px solid green;
+    flex: 0 0 25%;
+    min-width:0;
+    writing-mode: horizontal-tb;
+}
+
+
+.cover-img{
+    object-fit:cover;
+    width:400px;
+    height:400px;
+}
+
+@media screen and (max-height: 600px)
+{
+    #main{
+        height:100vh;
+        margin-top:0;
+        margin-bottom:0;
+    }
+    .scroll-grid{
+        min-height:100px;
+        min-width:0px;
+    }
+}
